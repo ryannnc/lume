@@ -1,0 +1,84 @@
+.account-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 200px;
+}
+
+.account-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.account-input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.account-input:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.account-submit {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.account-submit:hover {
+  opacity: 0.8;
+}
+
+.google-button {
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.account-toggle {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+.account-toggle:hover {
+  color: black;
+}
+
+.account-error {
+  color: red;
+  font-size: 14px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+}
