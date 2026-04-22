@@ -4,17 +4,23 @@ import hero3 from '../assets/hero2.png'
 import { FaDumbbell, FaLaptopCode, FaHeart } from 'react-icons/fa'
 import AnimatedImage from '../animation/animatedimage'
 import SlideIn from '../animation/slide'
+import WaitlistCTA from '../components/waitlistcta'
 
 export default function Home() {
   return (
     <main className="home">
       <section className="home-section hero-section">
+        <video autoPlay loop muted playsInline className='background-video'>
+          <source src="/videos/austin.mp4" type="video/mp4"/>
+        </video>
+
         <div className="content">
           <AnimatedText
             as="h1"
             text="Become The Best Version Of Yourself"
             className="hero"
           />
+          <WaitlistCTA/>
         </div>
 
         <div className="scroll-indicator">
