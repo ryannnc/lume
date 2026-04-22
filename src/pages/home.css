@@ -1,4 +1,215 @@
-.hero{
+.home {
+  width: 100%;
+  color: #fff;
+}
+
+/* each section = full screen block */
+.home-section {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* HERO TEXT SECTION */
+.hero-section {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+.hero {
+  text-align: left;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1.05;
+  max-width: 16ch;
+  margin: 0;
+}
+
+/* scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.scroll-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  transform: rotate(-45deg);
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-45deg);
+  }
+}
+
+/* IMAGE SECTION */
+.image-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+
+.hero-image-wrap {
+  width: 100%;
+  height: 100vh;
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;   /* was center */
+  padding: 12vh 360px;  /* manual horizontal spacing */
+}
+
+/* two-column layout on image */
+.about-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 120px;  /* increase from 48px → more separation */
+  align-items: start;
+}
+
+/* left side placeholder icons */
+.about-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.about-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 400px; /* prevents stretching */
+  transform: translateY(400px); /* push icons down */
+
+}
+.icon-label {
+  font-size: 1rem;
+  color: #f3f3f3;
+  margin: 0;
+}
+
+/* right side text */
+.about-text {
+  margin-left: auto;
+  max-width: 800px;
+  text-align: right;
+  padding-right: 40px;   /* pushes it away from edge cleanly */
+}
+
+.overlay-text {
+  margin: 0 0 16px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  color: white;
+}
+
+.about-description {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* animation words */
+.animated-word {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.animated-word:last-child {
+  margin-right: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .content {
+    padding: 120px 16px;
+  }
+
+  .hero {
+    font-size: clamp(2rem, 10vw, 4rem);
+    max-width: 10ch;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-icons {
+    order: 2;
+  }
+
+  .about-text {
+    order: 1;
+    max-width: 100%;
     text-align: left;
-    padding: 86px 24px;
+    margin-left: 0;
+  }
+
+  .overlay-text {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .about-description {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .icon-card {
+    padding: 14px 16px;
+  }
 }

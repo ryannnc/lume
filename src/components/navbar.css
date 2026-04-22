@@ -1,23 +1,29 @@
-.navbar{
-    justify-content: space-between;
-    display: flex;
-    padding: 24px 36px;
-    align-items: center;
-    background-color: transparent;
+.navbar {
+  width: 100%;
+  background-color: transparent;
 }
 
-.left , .right{
-    display: flex;
-    gap: 24px;
+/* THIS is the key fix */
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px; /* match hero/content padding */
+}
+
+/* keep these */
+.left, .right {
+  display: flex;
+  gap: 24px;
 }
 
 .navbar a {
-    text-decoration: None;
-    font-size: 16px;
-    font-weight: 500;
-    color: #ffffff
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .navbar a:hover {
-    color: rgb(95, 120, 142);
+  color: rgb(95, 120, 142);
 }
