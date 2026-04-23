@@ -35,8 +35,8 @@ export default function WaitlistCTA() {
   return (
     <SlideUp className="waitlist-cta" delay={0.2}>
       <p className="waitlist-cta__text">
-        The app is in development. Take the first step toward becoming your best
-        self—join the waitlist and we’ll email you when the beta launches.
+        The app is in development. Take the first step toward becoming the best creative you can be
+        join the waitlist and we’ll email you when the first drop launches.
       </p>
 
       <form className="waitlist-cta__form" onSubmit={handleSubmit}>
