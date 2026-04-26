@@ -70,6 +70,32 @@
   color: #ffd6d6;
 }
 
+.waitlist-cta__textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.waitlist-cta__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.waitlist-cta__counter {
+  margin: 4px 0 0;
+  width: 100%;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
 @media (max-width: 768px) {
   .waitlist-cta {
     max-width: 100%;

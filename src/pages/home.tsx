@@ -1,9 +1,13 @@
 import './home.css'
 import AnimatedText from '../animation/animatedtext'
 import hero3 from '../assets/hero2.png'
+import shotdeck from '../assets/shotdeck.jpg'
 import AnimatedImage from '../animation/animatedimage'
 import SlideIn from '../animation/slide'
 import WaitlistCTA from '../components/waitlistcta'
+import Showcase from '../components/showcase'
+import { FaInstagram } from 'react-icons/fa'
+
 
 export default function Home() {
   return (
@@ -28,32 +32,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-section showcase-section">
-        <div className=" showcase-content">
-          <div className="showcase-row">
-            <div className="showcase-card">
-              <video autoPlay loop muted playsInline className="showcase-video">
-                <source src="/videos/spotify3.mp4" type="video/mp4" />
-              </video>
-              <h2 className="showcase-label">Motion Graphics</h2>
-            </div>
-
-            <div className="showcase-card">
-              <video autoPlay loop muted playsInline className="showcase-video">
-                <source src="/videos/stillscollection.mp4" type="video/mp4" />
-              </video>
-              <h2 className="showcase-label">LUTs</h2>
-            </div>
-
-            <div className="showcase-card">
-              <video autoPlay loop muted playsInline className="showcase-video">
-                <source src="/videos/shot-decks.mp4" type="video/mp4" />
-              </video>
-              <h2 className="showcase-label">Shot Decks</h2>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Showcase />
 
       <section className="home-section image-section">
         <AnimatedImage
@@ -75,9 +54,18 @@ export default function Home() {
                 </p>
               </div>
             </SlideIn>
+                <a
+      href="https://instagram.com/rryanncao"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="instagram-icon"
+    >
+      <FaInstagram />
+    </a>
+
           </div>
         </div>
       </section>
-    </main>
+   </main>
   )
 }   

@@ -3,13 +3,11 @@
   color: #fff;
 }
 
-/* Each section fills the viewport */
 .home-section {
   width: 100%;
   min-height: 100vh;
 }
 
-/* ---------------- HERO SECTION ---------------- */
 
 .hero-section {
   position: relative;
@@ -67,7 +65,6 @@
   margin-right: 0;
 }
 
-/* Scroll indicator */
 .scroll-indicator {
   position: absolute;
   z-index: 2;
@@ -115,7 +112,6 @@
   }
 }
 
-/* ---------------- IMAGE / ABOUT SECTION ---------------- */
 
 .image-section {
   position: relative;
@@ -190,7 +186,6 @@
   color: #f3f3f3;
 }
 
-/* ---------------- SHOWCASE SECTION ---------------- */
 
 .showcase-section {
   background: #121212d7;
@@ -231,7 +226,24 @@
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* ---------------- MOBILE ---------------- */
+.instagram-icon {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 28px;
+  color: #fff;
+  opacity: 0.7;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.instagram-icon:hover {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.1);
+}
+
 
 @media (max-width: 768px) {
   .content {

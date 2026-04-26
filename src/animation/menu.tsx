@@ -62,17 +62,8 @@ export default function MobileMenu({ isOpen, onClose }) {
               <Link to="/product" onClick={onClose}>PRODUCT</Link>
             </motion.div>
 
-            <motion.div variants={linkVariants}>
-              <Link to="/resources" onClick={onClose}>RESOURCES</Link>
-            </motion.div>
 
-            <motion.div variants={linkVariants}>
-              <Link to="/download" onClick={onClose}>DOWNLOAD</Link>
-            </motion.div>
 
-            <motion.div variants={linkVariants}>
-              <Link to="/account" onClick={onClose}>ACCOUNT</Link>
-            </motion.div>
           </div>
         </motion.div>
       )}
