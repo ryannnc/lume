@@ -1,0 +1,33 @@
+.photo-grid {
+  margin: 24px auto 0;
+  max-width: 2000px;
+  padding: 0 48px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo-grid__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-content {
+  padding-bottom: 0;
+}
+
+
+
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -25,12 +25,6 @@ export default function Navbar() {
         <div className="desktop-nav">
           <div className="left">
             <Link to="/product">Product</Link>
-            <Link to="/resources">Resources</Link>
-            <Link to="/download">Download</Link>
-          </div>
-
-          <div className="right">
-            <Link to="/account">Account</Link>
           </div>
         </div>
 

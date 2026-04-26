@@ -8,6 +8,8 @@ export default function WaitlistCTA() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
+  const [text, setText] = useState('')
+  const maxFeatureLength = 250
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -16,14 +18,18 @@ export default function WaitlistCTA() {
 
     try {
       setLoading(true)
-      await joinWaitlist(email)
+      await joinWaitlist(email, text)
       setSuccess("You're on the list. We'll email you when the beta launches.")
       setEmail('')
+      setText('')
     } catch (err: any) {
       console.error('Waitlist error:', err)
 
       if (err?.code === 'permission-denied') {
         setError('This email may already be on the waitlist.')
+      }
+      if (err?.message == 'Profanity is not allowed'){
+        setError('Cmon now there is no need for this language T-T')
       } else {
         setError('Something went wrong. Try again.')
       }
@@ -35,8 +41,8 @@ export default function WaitlistCTA() {
   return (
     <SlideUp className="waitlist-cta" delay={0.2}>
       <p className="waitlist-cta__text">
-        The app is in development. Take the first step toward becoming your best
-        self—join the waitlist and we’ll email you when the beta launches.
+        The app is in development. Take the first step toward becoming the best creative you can be
+        join the waitlist and we’ll email you when the first drop launches.
       </p>
 
       <form className="waitlist-cta__form" onSubmit={handleSubmit}>
@@ -48,6 +54,16 @@ export default function WaitlistCTA() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
+        <textarea 
+        placeholder='(OPTIONAL) What features would you like to see?'
+        className='waitlist-cta__textarea'
+        value = {text}
+        onChange={(e) => setText(e.target.value)}
+        maxLength={maxFeatureLength}
+        />
+        <p className='waitlist-cta__counter'>
+          {text.length} / {maxFeatureLength}
+        </p>
 
         <button
           type="submit"
